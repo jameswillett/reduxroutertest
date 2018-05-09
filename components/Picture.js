@@ -25,8 +25,4 @@ const mapStateToProps = (state) => ({
   id: state.component.payload,
 })
 
-const mapDispatchToProps = {
-
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Picture);
+export default connect(mapStateToProps)(Picture);

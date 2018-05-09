@@ -18,14 +18,4 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  message: state.message,
-  location: state.location,
-  component: state.component,
-})
-
-const mapDispatchToProps = {
-  setMessage,
-}
-
 export default connect(state => state)(App)
