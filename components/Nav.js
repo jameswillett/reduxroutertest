@@ -12,12 +12,4 @@ export const Nav = () => {
   )
 }
 
-const mapStateToProps = (state) => ({
-  message: state.message,
-})
-
-const mapDispatchToProps = {
-
-}
-
 export default Nav;
