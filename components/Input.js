@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
-import { setMessage } from '../actions/message';
+import { setMessage, toggleLoggedIn } from '../actions/message';
 
 class Input extends Component {
   constructor(props){
@@ -30,6 +30,7 @@ class Input extends Component {
           onChange={this.handleChange}
         />
         <button onClick={() => this.props.setMessage(this.state.message)}>text</button>
+        <button onClick={() => this.props.toggleLoggedIn()}>{this.props.loggedIn ? 'Log out' : 'Log in'}</button>
       </div>
     </div>
     )
@@ -38,10 +39,12 @@ class Input extends Component {
 
 const mapStateToProps = (state) => ({
   message: state.message,
+  loggedIn: state.loggedIn,
 })
 
 const mapDispatchToProps = {
   setMessage,
+  toggleLoggedIn,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Input);

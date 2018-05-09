@@ -8,3 +8,10 @@ export const setMessage = (message) => {
     });
   }
 }
+
+export const toggleLoggedIn = () => {
+  return dispatch =>
+    dispatch({
+      type: 'TOGGLE_LOGGED_IN',
+    })
+}
